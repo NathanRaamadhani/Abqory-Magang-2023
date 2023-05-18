@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "speakers",
+  "info": {
+    "singularName": "speaker",
+    "pluralName": "speakers",
+    "displayName": "Speaker",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

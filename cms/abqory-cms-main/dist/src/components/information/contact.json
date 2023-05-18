@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_information_contacts",
+    "info": {
+        "displayName": "Contact"
+    },
+    "options": {},
+    "attributes": {
+        "whatsapp": {
+            "type": "string"
+        },
+        "instagram": {
+            "type": "string"
+        },
+        "twitter": {
+            "type": "string"
+        }
+    }
+}

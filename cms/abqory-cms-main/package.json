@@ -1,0 +1,40 @@
+{
+  "name": "abqory-cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.7",
+    "@strapi/plugin-graphql": "^4.8.2",
+    "@strapi/plugin-i18n": "4.8.2",
+    "@strapi/plugin-seo": "^1.8.0",
+    "@strapi/plugin-users-permissions": "4.8.2",
+    "@strapi/provider-upload-aws-s3": "^4.8.2",
+    "@strapi/strapi": "4.8.2",
+    "@strapi/typescript-utils": "^4.8.2",
+    "immer": "9.0.6",
+    "mysql": "^2.18.1",
+    "pg": "^8.10.0",
+    "pg-connection-string": "^2.5.0"
+  },
+  "author": {
+    "name": "Yusril Izza Aulia"
+  },
+  "strapi": {
+    "uuid": "f4486ecc-9bcc-42eb-b531-4d4d2263cd0e"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trainings",
+  "info": {
+    "singularName": "training",
+    "pluralName": "trainings",
+    "displayName": "Training",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "start_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "end_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "sponsor": {
+      "type": "component",
+      "repeatable": true,
+      "component": "academy.event-sponsor"
+    },
+    "syllabus": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "benefits": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "contact": {
+      "displayName": "Contact",
+      "type": "component",
+      "repeatable": false,
+      "component": "information.contact"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

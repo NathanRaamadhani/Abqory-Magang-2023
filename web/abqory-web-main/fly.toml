@@ -1,0 +1,44 @@
+# fly.toml file generated for abqory-web on 2023-04-14T10:32:27+07:00
+
+app = "abqory-web"
+primary_region = "sin"
+
+[build]
+  [build.args]
+    NEXT_PUBLIC_ABQORY_YOUTUBE_CHANNEL_ID = "UCQ5dUW39QsNAtLRJkxwkpNg"
+    NEXT_PUBLIC_CMS_GRAPHQL_URL = "https://cms.abqorysharia.com/graphql"
+    NEXT_PUBLIC_CMS_URL = "https://cms.abqorysharia.com"
+    NEXT_PUBLIC_SITE_URL = "https://www.abqorysharia.com"
+    NEXT_PUBLIC_YOUTUBE_API_KEY = "AIzaSyDKFGQwxGprK3Btawl4NQc900rWQxoxSvg"
+
+[env]
+  PORT = "8080"
+
+[experimental]
+  auto_rollback = true
+
+[[services]]
+  http_checks = []
+  internal_port = 8080
+  processes = ["app"]
+  protocol = "tcp"
+  script_checks = []
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+    type = "connections"
+
+  [[services.ports]]
+    force_https = true
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
+
+  [[services.tcp_checks]]
+    grace_period = "1s"
+    interval = "15s"
+    restart_limit = 0
+    timeout = "2s"

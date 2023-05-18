@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.abqorysharia.com
+
+# Sitemaps
+Sitemap: https://www.abqorysharia.com/sitemap.xml
