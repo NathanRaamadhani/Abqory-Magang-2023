@@ -1,5 +1,5 @@
     // todoList.js renders the todo list gotten from the Strapi backend.
-    import TodoItem from "../komponen/todoitem";
+   import TodoItem from "../components/todoItem";
     function TodoList({ todos, editTodoItem, deleteTodoItem }) {
       return (
         <div className="todoListContainer">
