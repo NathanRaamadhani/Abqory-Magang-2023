@@ -8,10 +8,14 @@ import TodoList from "./containers/todoList";
 import axios from "axios";
 export default function Home() {
   const [todos, setTodos] = useState([]);
-  useEffect(async () => {
+   useEffect(() => {
+    fetchTodos();
+   }, []);
+ 
+  const fetchTodos = async () => {
     const result = await axios.get("http://localhost:1337/api/to-dos");
     setTodos(result?.data);
-  }, []);
+  };
   const addTodo = async (todoText) => {
     if (todoText && todoText.length > 0) {
       const result = await axios.post("http://localhost:1337/api/to-dos", {

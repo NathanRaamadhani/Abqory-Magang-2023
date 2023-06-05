@@ -4,7 +4,8 @@
       return (
         <div className="todoListContainer">
           <div className="todosText">Todos</div>
-          {todos
+          {Array.isArray(todos) &&
+          todos
             .sort((a, b) => b.created_at.localeCompare(a.created_at))
             .map((todo, i) => (
               <TodoItem
