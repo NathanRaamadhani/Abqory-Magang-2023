@@ -6,7 +6,6 @@
           <div className="todosText">Todos</div>
           {Array.isArray(todos) &&
           todos
-            .sort((a, b) => b.created_at.localeCompare(a.created_at))
             .map((todo, i) => (
               <TodoItem
                 todo={todo}

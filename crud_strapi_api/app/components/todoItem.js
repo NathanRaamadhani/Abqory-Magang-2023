@@ -2,7 +2,7 @@ function TodoItem({ todo, editTodoItem, deleteTodoItem }) {
     return (
       <>
         <div className="todoItem">
-          <div className="todoItemText">{todo.todoText}</div>
+          <div className="todoItemText">{todo.attributes.kegiatan}</div>
           <div className="todoItemControls">
             <i className="todoItemControlEdit">
               <button className="bg-default" onClick={() => editTodoItem(todo)}>

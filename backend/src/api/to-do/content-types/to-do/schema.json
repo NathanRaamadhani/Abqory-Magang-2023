@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "kegiatan": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
